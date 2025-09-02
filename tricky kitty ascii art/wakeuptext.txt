@@ -1,0 +1,7 @@
+╔═════════════════════════════════════════════════════════════════════╗
+║ You are awake, although annoyed that you couldn’t sleep more.       ║
+║  You take note that your human caretakers are out of the house      ║
+║  and that the sun is going down outside. The cold air of the house  ║
+║  hits you. You feel like going outside (at least you think so       ║
+║ anyway).                                                            ║
+╚═════════════════════════════════════════════════════════════════════╝
