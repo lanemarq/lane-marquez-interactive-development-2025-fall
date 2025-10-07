@@ -1,0 +1,19 @@
+@font-face {
+    font-family:MAROLA;
+    src: url(./MAROLA__.TTF);
+}
+
+@font-face {
+    font-family: Soopafre;
+    src: url(./soopafre.ttf);
+}
+
+body{
+    text-align:center;
+    font-family: Soopafre;
+    background-color:#b5d335;
+}
+
+.list{
+    font-family: Soopafre;
+}
