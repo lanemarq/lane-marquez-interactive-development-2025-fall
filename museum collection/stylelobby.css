@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Mainfont;
+    src: url(./Hold.otf);
+}
+
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Mainfont;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.rectangle {
+  width: 80px;
+  background-color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 0 white;
+}
+
+/* Gradually taller rectangles */
+.rectangle:nth-child(1) { height: 80px; }
+.rectangle:nth-child(2) { height: 120px; }
+.rectangle:nth-child(3) { height: 160px; }
+.rectangle:nth-child(4) { height: 200px; }
+.rectangle:nth-child(5) { height: 240px; }
+
+.rectangle:hover {
+  box-shadow: 0 0 20px 4px white;
+  transform: translateY(-5px);
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
