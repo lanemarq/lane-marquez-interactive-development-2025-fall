@@ -1,0 +1,52 @@
+@font-face {
+    font-family: Maintype;
+    src: url(./Hold.otf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Maintype;
+  background-color: white; 
+  color: rgb(255, 244, 233);
+  overflow-y: auto; 
+  min-height: 100vh;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  flex-direction: column;
+  width: 100%;
+  padding: 50px 20px; 
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+
+#poem-container {
+  max-width: 800px;
+  width: 80%;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+.stanza {
+  opacity: 0;
+  margin-bottom: 2em;
+  transition: opacity 7s ease;
+}
+
+body {
+  animation: bgShift 7s linear infinite;
+}
+
+@keyframes bgShift {
+  0%   { background-color: #16202e; }   
+  25%  { background-color: #271f2c; }   
+  50%  { background-color: #3b251f; }  
+  75%  { background-color: #392a21; }  
+  100% { background-color: #16202e; } 
+}
