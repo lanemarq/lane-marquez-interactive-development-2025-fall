@@ -1,8 +1,7 @@
 @font-face {
-    font-family: Mainfont;
-    src: url(./Hold.otf);
+  font-family: Mainfont;
+  src: url(./Hold.otf);
 }
-
 
 body {
   background-color: black;
@@ -12,46 +11,76 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100svh;
   margin: 0;
+  padding: 20px;
 }
 
 .main-title {
-  text-align: center;
-  font-size: 2em;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
 }
 
 .container {
   display: flex;
-  gap: 20px;
+  gap: clamp(12px, 4vw, 24px);
   align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .rectangle {
-  width: 80px;
+  width: clamp(60px, 10vw, 90px);
   background-color: white;
-  transition: all 0.3s ease;
+  border: none;
   cursor: pointer;
-  box-shadow: 0 0 0 white;
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+  opacity: 0;
+  animation: riseIn 0.8s ease forwards;
 }
 
-/* Gradually taller rectangles */
-.rectangle:nth-child(1) { height: 80px; }
-.rectangle:nth-child(2) { height: 120px; }
-.rectangle:nth-child(3) { height: 160px; }
-.rectangle:nth-child(4) { height: 200px; }
-.rectangle:nth-child(5) { height: 240px; }
+.rectangle:nth-child(1) { height: 80px; animation-delay: 0.1s; }
+.rectangle:nth-child(2) { height: 120px; animation-delay: 0.2s; }
+.rectangle:nth-child(3) { height: 160px; animation-delay: 0.3s; }
+.rectangle:nth-child(4) { height: 200px; animation-delay: 0.4s; }
 
-.rectangle:hover {
-  box-shadow: 0 0 20px 4px white;
-  transform: translateY(-5px);
+.rectangle:hover,
+.rectangle:focus-visible {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 25px 6px white;
+}
+
+.rectangle:active {
+  transform: translateY(0) scale(0.95);
+  opacity: 0.7;
 }
 
 .title {
-  margin-top: 20px;
-  font-size: 1.2em;
+  margin-top: 24px;
+  font-size: clamp(1rem, 3vw, 1.3rem);
   opacity: 0;
   transition: opacity 0.3s ease;
   text-align: center;
 }
+
+/* Animations */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes riseIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

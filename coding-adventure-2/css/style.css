@@ -1,0 +1,72 @@
+
+@font-face {
+    font-family:babydoll;
+    src: url(../baby-doll.ttf);
+
+}
+
+body {
+    background-color: bisque;
+    font-family:babydoll;
+    font-size: 14px;
+    margin-left:300px;
+    margin-right:300px;
+}
+
+a:link {
+    color:black;
+}
+
+a:visited {
+    color:black;
+    font-family:babydoll;
+}
+
+a:hover {
+    color:grey;
+    font-family:babydoll;
+}
+
+a:active {
+    color:grey;
+    font-family:babydoll;
+}
+
+div {
+    color:black;
+    margin: 10px;
+    width: 100px;
+    padding: 10px;
+    font-family:babydoll;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+    height: 500px;
+    width: 1000;
+}
+
+pre{
+    text-align: center;
+}
+
+.box {
+    border-style:outset;
+    text-align: center;
+    margin: auto;
+    margin-left: 225px;
+    float: left;
+}
+
+.box2{
+    border-style:outset;
+    text-align: center;
+    margin: auto;
+    margin-right: 225px;
+}
+
+p {
+    text-align: center;
+}
